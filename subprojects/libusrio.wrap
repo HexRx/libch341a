@@ -1,5 +1,5 @@
 [wrap-git]
-url = https://github.com/fifteenhex/libusrio.git
+url = https://github.com/HexRx/libusrio.git
 revision = head
 depth = 1
 
