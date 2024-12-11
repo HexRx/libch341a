@@ -28,7 +28,7 @@ int main (int argc, char **argv)
 
 	uint8_t reg = 0x02;
 	uint8_t val;
-	ret = i2c_controller_writeone_then_readone(i2c_controller, 0x51, reg, &val, ch341a_mfd_priv);
+	ret = i2c_controller_write_then_read(i2c_controller, 0x51, &reg, sizeof(uint8_t), &val, sizeof(uint8_t), ch341a_mfd_priv);
 	if (ret) {
 		printf("Failed to read register %02x: %d\n", reg, ret);
 		return ret;
